@@ -1,0 +1,38 @@
+[project]
+name = "ts-academy-capstone"
+version = "0.1.0"
+description = "Logistics pipeline data engineering capstone project"
+authors = [
+    {name = "oyelabi adeolu", email = "oyelabiadeolu@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "pandas (>=2.2.0)",
+    "numpy (>=2.0.0)",
+    "sqlalchemy (>=2.0.54,<3.0.0)",
+    "pyodbc (>=5.3.0,<6.0.0)",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.poetry]
+package-mode = false
+packages = [
+    { include = "ts_academy_capstone", from = "src" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.14"
+pandas = "^2.2.0"
+numpy = "^2.0.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.0.0"
+pytest-cov = "^6.0.0"
+
+[build-system]
+requires = ["poetry-core>=2.0.0"]
+build-backend = "poetry.core.masonry.api"
